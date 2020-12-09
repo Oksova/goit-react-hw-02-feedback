@@ -1,0 +1,18 @@
+.section {
+  text-align: start;
+  padding-bottom: 15px;
+}
+.title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.16;
+  text-align: start;
+  letter-spacing: 0.03em;
+
+  border-bottom: 4px dotted coral;
+}
+ul,
+li {
+  list-style: none;
+}
