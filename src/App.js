@@ -1,10 +1,10 @@
 import { Component } from 'react';
 
-import Container from './Container/Container';
-import Section from './Section/Section';
-import Statistics from './Statistics/Statistics';
-import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
-import Notification from './Notification/Notitfication';
+import Container from './components/Container/Container';
+import Section from './components/Section/Section';
+import Statistics from './components/Statistics/Statistics';
+import FeedbackOptions from './components/FeedbackOptions/FeedbackOptions';
+import Notification from './components/Notification/Notitfication';
 
 class App extends Component {
   state = {
@@ -36,12 +36,12 @@ class App extends Component {
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
             onLeaveFeedback={this.feedbackButton}
-          ></FeedbackOptions>
+          />
         </Section>
 
         <Section title="Statistics" className="FeedbackTitle">
           {this.countTotalFeedback() === 0 ? (
-            <Notification message="No feedback given"></Notification>
+            <Notification message="No feedback given" />
           ) : (
             <Statistics
               className="Statistics"
@@ -50,7 +50,7 @@ class App extends Component {
               bad={this.state.bad}
               total={total}
               positivePercentage={totalPersentage}
-            ></Statistics>
+            />
           )}
         </Section>
       </Container>
